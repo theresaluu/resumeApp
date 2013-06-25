@@ -116,8 +116,9 @@ $(document).ready(function() {
      });
 });
 */
-
 $(document).ready(function() {
+
+	//adds eduction block
 	$('.education_block_add').click(function() {
 		var html = $('.education_block').first().clone();
 		html.css('display' , 'none');
@@ -126,6 +127,7 @@ $(document).ready(function() {
 		return false;
 	});
 
+	//adds skills block
 	$('.skills_block_add').click(function() {
 		var html = $('.skills_block').first().clone();
 		html.css('display' , 'none');
@@ -135,8 +137,7 @@ $(document).ready(function() {
 		return false;
 	});
 
-
-
+	//adds accomplishments block
 	$('.accomplishments_block_add').click(function() {
 		var html = $('.accompl_block').first().clone();
 		html.css('display' , 'none');
@@ -146,15 +147,27 @@ $(document).ready(function() {
 		return false;
 	});
 	
+	//adds dropdown function
 	$('.dropdown-toggle').dropdown();
 
+	//populating an object and doing each to dynamically capture user input
 	$('#userDataForm').submit(function() {
 		//caching this
 		var userData = {};
 		userData.name = $('#fullname').val();
+		userData.name = $('#street_address').val();
+		userData.name = $('#fullname').val();
 
 		userData.schools = [];
 		var education_blocks = $('.education_block');
+
+		//machiko, carolyn, josh solution
+
+		school_groups
+
+
+
+
 
 		console.log(education_blocks);
 		console.log(userData);
@@ -162,6 +175,10 @@ $(document).ready(function() {
 		//it will because we are submitting with AJAX
 		//all code goes above 
 	});
+
+	
+
+
 
 	/*$(function() {
     $( "#datepicker" ).datepicker();

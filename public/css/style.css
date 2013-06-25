@@ -1,6 +1,10 @@
+body {
+	background-color: silver;
+}
+
 #name {
 	text-align: right;
-	margin-top: -110px;
+	margin-top: -98px;
 	margin-right: -19px;
 	font-size: 60px;
 	
@@ -17,6 +21,10 @@
 	width:1059px;
 }
 
+#infoLine {
+	padding-top: 40px;
+}
+
 #email {
 	float:left;
 }
@@ -30,7 +38,7 @@
 #phone {
 	float: left;
 	text-align: right;
-	margin-left: 192px;
+	margin-left: 151px;
 	padding-left: 113px;
 
 }
@@ -50,7 +58,7 @@
 }
 
 .miniheading {
-	margin-top: -78px;
+	margin-top: -85px;
 	margin-left: -8px;
 }
 
@@ -116,7 +124,6 @@
 	padding-top: 5px;
 	padding-right: 5px;
 	font-style: italic;
-
 }
 
 .citystate {
@@ -125,5 +132,8 @@
 	float: left;
 	margin-top: -5px;
 	padding-top: 5px;
+}
 
+.responsibilities {
+	padding-left: 3px;
 }

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>	
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		script>
+	</head>
+	
+	<body>
+	<!---->
+	<form id= "userDataForm" class="form-horizontal">
+		<fieldset id="contact"t>
+			<legend> Contact Information </legend>
+			<span class="help-block"> Help employers find you!</span>
+			<div class="control-group">
+				<label class="control-label" for="fullname">Name </label>
+				<div class="controls">
+					<input id= "fullname" type="text" placeholder="e.g. Lady Gaga"/>
+				</div>
+				<label class="control-label" for="address">Address</label>
+				<div class="controls">
+					<input id= "addy" type="text" placeholder="123 Elm ST, City, CA 90210"/>
+				</div>
+				<label class="control-label" for="e_address">Email</label>
+				<div class="controls">
+					<input id= "e_address" type="text" placeholder="cookie@monster.com"/>
+				</div>
+				<label class="control-label" for="mobile">Mobile</label>
+				<div class="controls">
+					<input id= "mobile" type="text" placeholder="3124473892"/>
+				</div>
+			</div>
+		</fieldset>
+
+		<fieldset id="skills">
+			<legend> Skills </legend>
+			<span > Toot your own horn here.</span>
+			<div class="skills_block" class="control-group">
+				<label class="control-label" for="type">Date </label>
+				<div class="controls">
+					<input type="date"/>
+				</div>
+				<label class="control-label" for="type">Skills</label>
+				<div class="controls">
+					<input id= "type" type="text" placeholder="e.g. Project Managment"/>
+				</div>
+				<label class="control-label" for="description">Description</label>
+				<div class="controls">
+					<textarea rows="3"></textarea>
+				</div>
+			</div>
+			<span class="help-block">
+				<a href="#" class="skills_block_add">
+					add another skill
+				</a>
+			</span>
+		</fieldset>
+
+		<fieldset id="accomplishments">
+			<legend> Accomplishments </legend>
+			<span > Look, Ma!</span>
+			<div class="accompl_block" class="control-group">
+				<label class="control-label" for="type">Date </label>
+				<div class="controls">
+					<input type="date"/>
+				</div>
+				<label class="control-label" for="type">Accomplishments</label>
+				<div class="controls">
+					<input id= "type" type="text" placeholder="e.g. Won a webby"/>
+				</div>
+				<label class="control-label" for="description">Description</label>
+				<div class="controls">
+					<textarea rows="3"></textarea>
+				</div>
+			</div>
+			<span class="help-block">
+				<a href="#" class="accomplishments_block_add">
+					add another accomplishments
+				</a>
+			</span>
+		</fieldset>
+
+		<fieldset id="Education">
+			<legend> Add your Schools </legend>
+			<div class="education_block" class="control-group">
+				<label class="control-label" for="type">Date </label>
+				<div class="controls">
+					<input type="date"/>
+				</div>
+				<label class="control-label" for="type"> School </label>
+				<div class="controls">
+				<input type="text" placeholder="e.g. Harverd" />
+				</div>
+				<label class="control-label" for="type"> Degree </label>
+				<div class="controls" class="dropdown">
+				 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dopdown trigger</a>
+				 <ul class"dropdown-menu" role="menu" aria-labelledby= "dropdownMenu">
+					<li><a tabindex="-1" class= "btn">Training</a></li>
+					<li><a tabindex="-1" class= "btn">Bachelors</a></li>
+					<li><a tabindex="-1" class= "btn">Masters</a></li>
+					<li><a tabindex="-1" class= "btn">PHD</a></li>
+				</ul>
+
+				</div>
+				<label class="control-label" for="type"> Major </label>
+				<div class="controls">
+				<input type="text" placeholder="e.g. Anthropolgy" />
+				</div>
+			</div>
+			<span class="help-block">
+				<a href="#" class="education_block_add">
+					add another school
+				</a>
+			</span>
+		</fieldset>
+
+		<button type="submit" class="btn">Save $amp; Continue</button>	
+	</form>
+
+	
+
+	</body>
+</html>

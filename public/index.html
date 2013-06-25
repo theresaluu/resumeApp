@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>	
 		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/style.css">
 
 		<script type="text/javascript" src="js/jquery.js"></script>
@@ -11,25 +12,24 @@
 		
 		<div id = "basic" class ="clearfix">
 			<h1 id= "name"> georgie luu-truong </h1>
-			<div id = "email"> georgieisagrumpydog@gmail.com</div>
-			<div id ="address"> 123 noneofyourbizwax ln, dogeatdogworld, ca 11111 </div>
-			<div id = "phone"> 234.567.8900 </div>
+			<div id= "infoLine">
+				<div id = "email"> georgieisagrumpydog@gmail.com</div>
+				<div id ="address"> 123 noneofyourbizwax ln, dogeatdogworld, ca 11111 </div>
+				<div id = "phone"> 234.567.8900 </div>
+			</div>
 		</div>
 
 
 		<div class = "list" class ="clearfix">
-			<h2 class = "miniheading">skills</h2>	
-			<div class = "type" id = "type1"> Indoor Tricks </div>
-			<div class = "tricks" id = "tricks1"> Sit, Come here, Paw, Bang-Bang </div>
-			<div class = "type" id = "type2"> Outdoor Tricks </div>
-			<div class = "tricks" id = "tricks2"> Sit, Come here, Paw, Bang-Bang </div>-->
-			<div class = "type" id = "type3"> Indoor Tricks </div>
-			<div class = "tricks" id = "tricks3"> Sit, Come here, Paw, Bang-Bang </div>
-			<div class = "type" id = "type4"> Outdoor Tricks </div>
-			<div class = "tricks" id = "tricks4"> Sit, Come here, Paw, Bang-Bang </div>-->
-			<div class = "type" id = "type5"> Outdoor Tricks </div>
-			<div class = "tricks" id = "tricks5"> Sit, Come here, Paw, Bang-Bang </div>-->
-			
+			<h2 class = "miniheading">skills</h2>  
+			<dl class="dl-horizontal">
+				<dt>Indoor Tricks</dt>
+				<dd>Sit, Come here, Paw, Bang-Bang </dd>
+			</dl>
+			<dl class="dl-horizontal">
+				<dt>Outdoor Tricks</dt>
+				<dd>Sit, Come here, Paw, Bang-Bang </dd>
+			</dl>
 		</div>
 
 		<div class = "list" class ="clearfix">
@@ -41,31 +41,34 @@
 		</div>
 
 		<div class = "summary" class="clearfix">
-			<h2 class = "miniheading">Work Experience</h2>
-			<div class = "dates"> 2006 - Current </div>
-			<div class = "position"> My Brother's Tattle-tale</div>
-			<div class = "employer"> Earth </div>
-			<div class = "citystate"> everycity, world-wide</div>
+			<h2 class = "miniheading">work experience</h2>
+			<ul class ="inline">
+				<li class='dates'> 2006 - Current </li>
+				<li class='position'> My Brother's Tattle-tale</li>
+				<li class='employer'> Earth </li>
+				<li class'citystate'> everycity, world-wide</li>
+			</ul>
 			<p class = "responsibilities"> If my brother is doing something wrong, I bark.  It's seriously a full time job because I'm such a straight-edge and have anxiety problems </p>
-					
-				
-			<div class = "dates"> 2006 - Current</div>
-			<div class = "position"> Guest-notifier</div>
-			<div class = "employer"> Earth </div>
-			<div class = "citystate"> everycity, world-wide</div>
+
+			<ul class ="inline">
+				<li class='dates'> 2006 - Current </li>
+				<li class='position'> Guest-notifier</li>
+				<li class='employer'> Earth </li>
+				<li class='citystate'> everycity, world-wide</li>
+			</ul>
 			<p class = "responsibilities"> If someone walks by the apartment, I bark.</p>
 		</div>
 
 		<div class = "summary" class="clearfix">
 			<h2 class = "miniheading">Education</h2>
-			<div class = "dates"> 2006 - Current </div>
-			<div class = "degree"> PHD </div>
-			<div class = "concentration"> Player Hating Degree </div>
-			<div class = "citystate"> Austin, TX</div>
-			<div class = "dates"> 2006 </div>
-			<p class = "accomplishment"> potty trained </p>
-			<div class = "dates"> 2007 </div>
-			<p class = "accomplishment"> stopped chewing on furniture </p>
+			<ul class="inline">
+				<li> 2006 - Current </li>
+				<li> PHD </li>
+				<li> Player Hating Degree </li>
+				<li> UT </li>
+				<li> Austin, TX</li>
+			</ul>
 		</div>
+			
 	</body>
 </html>

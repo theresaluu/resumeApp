@@ -1,6 +1,7 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
 	console.log('im alive');
 	$.ajax("/api/resumes/51c20830a3672af4b3000001", {
+
 		complete : function(response){
 			var first = response.responseJSON.name_first;
 			var last = response.responseJSON.name_last;
@@ -72,7 +73,7 @@ $(document).ready(function() {
 			}
 			console.log("accomplishment dates: " + accmpdate);
 			console.log("title: " + accmptitle);
-			console.log("description: " + accmpdes);
+			console.log("description: " + accmpdes);*/
 			
 			/*$('#tricks1').html(tricks[0]);
 			$('#tricks2').html(tricks[1]);
@@ -84,12 +85,12 @@ $(document).ready(function() {
 			$('#type2').html(type[0]);
 			$('#type3').html(type[0]);
 			$('#type4').html(type[0]);
-			$('#type5').html(type[0]);*/
+			$('#type5').html(type[0]);
 
 
 		}
 	});
-});
+});*/
 /*
 $(document).ready(function() {
      console.log('im alive');
@@ -116,4 +117,55 @@ $(document).ready(function() {
 });
 */
 
+$(document).ready(function() {
+	$('.education_block_add').click(function() {
+		var html = $('.education_block').first().clone();
+		html.css('display' , 'none');
+		$(this).before(html);
+		html.slideDown(600);
+		return false;
+	});
 
+	$('.skills_block_add').click(function() {
+		var html = $('.skills_block').first().clone();
+		html.css('display' , 'none');
+
+		$(this).before(html);
+		html.slideDown(600);
+		return false;
+	});
+
+
+
+	$('.accomplishments_block_add').click(function() {
+		var html = $('.accompl_block').first().clone();
+		html.css('display' , 'none');
+
+		$(this).before(html);
+		html.slideDown(600);
+		return false;
+	});
+	
+	$('.dropdown-toggle').dropdown();
+
+	$('#userDataForm').submit(function() {
+		//caching this
+		var userData = {};
+		userData.name = $('#fullname').val();
+
+		userData.schools = [];
+		var education_blocks = $('.education_block');
+
+		console.log(education_blocks);
+		console.log(userData);
+		return false; //type this in first; we know 
+		//it will because we are submitting with AJAX
+		//all code goes above 
+	});
+
+	/*$(function() {
+    $( "#datepicker" ).datepicker();
+  });*/
+
+
+});

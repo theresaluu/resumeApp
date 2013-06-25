@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>	
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script>
+		</script>
+
+		<style>
+		label {
+			display: inline-block;
+			width: 160px;
+			text-align: left;
+		}
+		ul, li {
+			list-style: none;
+		}
+		</style>
+
+	</head>
+	<body>
+		<div id="fb-root"></div>
+		<script>
+		window.fbAsyncInit = function() {
+		// init the FB JS SDK
+		FB.init({
+		appId      : '474393849304318',                        // App ID from the app dashboard
+		status     : true,                                 // Check Facebook Login status
+		xfbml      : true                                  // Look for social plugins on the page
+	});
+
+		FB.login(function(response) {
+			if (response. authResponse) {
+				console.log('Welcome! Fetching your information... ' );
+			});
+	} else {
+		console.log('User cancelled login or did not fully authorize.');
+	}
+});
+};
+
+
+
+	</body>
+</html>

@@ -151,8 +151,9 @@ $(document).ready(function() {
 	$('.dropdown-toggle').dropdown();
 
 	//populating an object and doing each to dynamically capture user input
+	//incomplete
 	$('#userDataForm').submit(function() {
-		//caching this
+		//caching this - 
 		var userData = {};
 		userData.name = $('#fullname').val();
 		userData.name = $('#street_address').val();

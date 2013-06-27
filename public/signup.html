@@ -6,19 +6,20 @@
 		<link rel="stylesheet" href="css/style.css">
 
 		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/signup.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
 	</head>
 	
 	<body>
 	<!---->
-	<form id= "userDataForm" class="form-horizontal">
+	<form id="userDataForm" class="form-horizontal">
 		<fieldset id="contact"t>
 			<legend> Contact Information </legend>
-			<span class="help-block"> Help employers find you!</span>
-			<div class="control-group">
+			<span > Help employers find you!</span>
+			<div class="contact_block" class="control-group">
 				<label class="control-label" for="fullname">Name </label>
 				<div class="controls">
-					<input id= "fullname" type="text" placeholder="e.g. Lady Gaga"/>
+					<input id= "fullname" type="text" placeholder="Last, First"/>
 				</div>
 				<label class="control-label" for="stAddress"> Street Address</label>
 				<div class="controls">
@@ -30,7 +31,59 @@
 				</div>
 				<label class="control-label" for="state">ST</label>
 				<div class="controls">
-					<input id= "state" type="text" placeholder="CA"/>
+					<select id= "state" name="state">
+						<option value="AL">AL</option>
+						<option value="AK">AK</option>
+						<option value="AZ">AZ</option>
+						<option value="AR">AR</option>
+						<option value="CA">CA</option>
+						<option value="CO">CO</option>
+						<option value="CT">CT</option>
+						<option value="DE">DE</option>
+						<option value="DC">DC</option>
+						<option value="FL">FL</option>
+						<option value="GA">GA</option>
+						<option value="HI">HI</option>
+						<option value="ID">ID</option>
+						<option value="IL">IL</option>
+						<option value="IN">IN</option>
+						<option value="IA">IA</option>
+						<option value="KS">KS</option>
+						<option value="KY">KY</option>
+						<option value="LA">LA</option>
+						<option value="ME">ME</option>
+						<option value="MD">MD</option>
+						<option value="MA">MA</option>
+						<option value="MI">MI</option>
+						<option value="MN">MN</option>
+						<option value="MS">MS</option>
+						<option value="MO">MO</option>
+						<option value="MT">MT</option>
+						<option value="NE">NE</option>
+						<option value="NV">NV</option>
+						<option value="NH">NH</option>
+						<option value="NJ">NJ</option>
+						<option value="NM">NM</option>
+						<option value="NY">NY</option>
+						<option value="NC">NC</option>
+						<option value="ND">ND</option>
+						<option value="OH">OH</option>
+						<option value="OK">OK</option>
+						<option value="OR">OR</option>
+						<option value="PA">PA</option>
+						<option value="RI">RI</option>
+						<option value="SC">SC</option>
+						<option value="SD">SD</option>
+						<option value="TN">TN</option>
+						<option value="TX">TX</option>
+						<option value="UT">UT</option>
+						<option value="VT">VT</option>
+						<option value="VA">VA</option>
+						<option value="WA">WA</option>
+						<option value="WV">WV</option>
+						<option value="WI">WI</option>
+						<option value="WY">WY</option>
+					</select>
 				</div>
 				<label class="control-label" for="e_address">Email</label>
 				<div class="controls">
@@ -38,7 +91,7 @@
 				</div>
 				<label class="control-label" for="mobile">Mobile</label>
 				<div class="controls">
-					<input id= "mobile" type="text" placeholder="3124473892"/>
+					<input class= "mobile" type="text" placeholder="3124473892"/>
 				</div>
 			</div>
 		</fieldset>
@@ -47,21 +100,26 @@
 			<legend> Skills </legend>
 			<span > Toot your own horn here.</span>
 			<div class="skills_block" class="control-group">
-				<label class="control-label" for="type">Date </label>
-				<div class="controls">
-					<input type="date"/>
-				</div>
 				<label class="control-label" for="type">Skills</label>
 				<div class="controls">
-					<input id= "type" type="text" placeholder="e.g. Project Managment"/>
+					<input class= "type" type="text" placeholder="e.g. Project Managment"/>
+				</div>
+				<label class="control-label" for="type">Expertise </label>
+				<div class="controls">
+					<select class="level" name="expertise">
+						<option value="Novice"> Novice </option>
+						<option value="Intermediate"> Intermediate </option>
+						<option value="Advanced"> Advanced </option>
+						<option value="Expert"> Expert </option>
+					</select>
 				</div>
 				<label class="control-label" for="description">Description</label>
 				<div class="controls">
-					<textarea rows="3"></textarea>
+					<textarea rows="3" class= "description"></textarea>
 				</div>
 			</div>
 			<span class="help-block">
-				<a href="#" class="skills_block_add">
+				<a href="#" class="skills_block_add" class="more">
 					+skill
 				</a>
 			</span>
@@ -69,24 +127,112 @@
 
 		<fieldset id="accomplishments">
 			<legend> Accomplishments </legend>
-			<span > Look, Ma!</span>
+			<span >Look, Ma!</span>
 			<div class="accompl_block" class="control-group">
 				<label class="control-label" for="type">Date </label>
 				<div class="controls">
-					<input type="date"/>
+					<input class= "ac_date" type="date"/>
 				</div>
 				<label class="control-label" for="type">Accomplishments</label>
 				<div class="controls">
-					<input id= "type" type="text" placeholder="e.g. Won a webby"/>
+					<input class= "ac_type" type="text" placeholder="e.g. Won a webby"/>
 				</div>
 				<label class="control-label" for="description">Description</label>
 				<div class="controls">
-					<textarea rows="3"></textarea>
+					<textarea rows="3" class="accomplDes"></textarea>
 				</div>
 			</div>
 			<span class="help-block">
-				<a href="#" class="accomplishments_block_add">
+				<a href="#" class="accomplishments_block_add" class="more">
 					+accomplishments
+				</a>
+			</span>
+		</fieldset>
+
+		<fieldset id="work"> 
+			<legend> Work History </legend>
+			<span>Timeline </span>
+			<div class="work_block" class="control-group">
+				<label class="control-label" for="type">Start Date </label>
+				<div class="controls">
+					<input class= "startWork" type="date"/>
+				</div>
+				<label class="control-label" for="type">End Date </label>
+				<div class="controls">
+					<input class= "endWork" type="date"/>
+				</div>
+				<label class="control-label" for="type">Employer</label>
+				<div class="controls">
+					<input class= "employer" type="text" placeholder="e.g. Google"/>
+				</div>
+				<label class="control-label" for="type">City</label>
+				<div class="controls">
+					<input class= "workCity" type="text" placeholder="e.g. Los Angeles"/>
+				</div>
+				<label class="control-label" for="state">ST</label>
+				<div class="controls">
+					<select class= "workState" name="state">
+						<option value="AL">AL</option>
+						<option value="AK">AK</option>
+						<option value="AZ">AZ</option>
+						<option value="AR">AR</option>
+						<option value="CA">CA</option>
+						<option value="CO">CO</option>
+						<option value="CT">CT</option>
+						<option value="DE">DE</option>
+						<option value="DC">DC</option>
+						<option value="FL">FL</option>
+						<option value="GA">GA</option>
+						<option value="HI">HI</option>
+						<option value="ID">ID</option>
+						<option value="IL">IL</option>
+						<option value="IN">IN</option>
+						<option value="IA">IA</option>
+						<option value="KS">KS</option>
+						<option value="KY">KY</option>
+						<option value="LA">LA</option>
+						<option value="ME">ME</option>
+						<option value="MD">MD</option>
+						<option value="MA">MA</option>
+						<option value="MI">MI</option>
+						<option value="MN">MN</option>
+						<option value="MS">MS</option>
+						<option value="MO">MO</option>
+						<option value="MT">MT</option>
+						<option value="NE">NE</option>
+						<option value="NV">NV</option>
+						<option value="NH">NH</option>
+						<option value="NJ">NJ</option>
+						<option value="NM">NM</option>
+						<option value="NY">NY</option>
+						<option value="NC">NC</option>
+						<option value="ND">ND</option>
+						<option value="OH">OH</option>
+						<option value="OK">OK</option>
+						<option value="OR">OR</option>
+						<option value="PA">PA</option>
+						<option value="RI">RI</option>
+						<option value="SC">SC</option>
+						<option value="SD">SD</option>
+						<option value="TN">TN</option>
+						<option value="TX">TX</option>
+						<option value="UT">UT</option>
+						<option value="VT">VT</option>
+						<option value="VA">VA</option>
+						<option value="WA">WA</option>
+						<option value="WV">WV</option>
+						<option value="WI">WI</option>
+						<option value="WY">WY</option>
+					</select>
+				</div>
+				<label class="control-label" for="description">Description</label>
+				<div class="controls">
+					<textarea rows="3" class="workDes"></textarea>
+				</div>
+			</div>
+			<span class="help-block">
+				<a href="#" class="work_block_add" class="more">
+					+work history
 				</a>
 			</span>
 		</fieldset>
@@ -94,32 +240,30 @@
 		<fieldset id="Education">
 			<legend> Add your Schools </legend>
 			<div class="education_block" class="control-group">
-				<label class="control-label" for="type">Date </label>
+				<label class="control-label" for="type">Completion Date </label>
 				<div class="controls">
-					<input type="date"/>
+					<input class="startDate" type="date"/>
 				</div>
 				<label class="control-label" for="type"> School </label>
 				<div class="controls">
-				<input type="text" placeholder="e.g. Harverd" />
+				<input class = "name" type="text" placeholder="e.g. Harverd" />
 				</div>
 				<label class="control-label" for="type"> Degree </label>
-				<div class="controls" class="dropdown">
-				 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dopdown trigger</a>
-				 <ul class"dropdown-menu" role="menu" aria-labelledby= "dropdownMenu">
-					<li><a tabindex="-1" class= "btn">Training</a></li>
-					<li><a tabindex="-1" class= "btn">Bachelors</a></li>
-					<li><a tabindex="-1" class= "btn">Masters</a></li>
-					<li><a tabindex="-1" class= "btn">PHD</a></li>
-				</ul>
-
+				<div class="controls">
+					<select class="degree">
+						<option value = "Training"> Training/Certificate </option>
+						<option value = "Bachelors"> Bachelors </option>
+						<option value = "Masters"> Masters </option>
+						<option value = "PHD"> PHD </option>
+				
 				</div>
-				<label class="control-label" for="type"> Major </label>
+				<label class="control-label" for="type"> Field </label>
 				<div class="controls">
 				<input type="text" placeholder="e.g. Anthropolgy" />
 				</div>
 			</div>
 			<span class="help-block">
-				<a href="#" class="education_block_add">
+				<a href="#" class="education_block_add" class="more">
 					+education
 				</a>
 			</span>
@@ -127,8 +271,6 @@
 
 		<button type="submit" class="btn">Save $amp; Continue</button>	
 	</form>
-
-	
 
 	</body>
 </html>

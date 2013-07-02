@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>R&eacute;sum&eacute;</title>
+  </head>
+  <body>
+    <button id="test-post">Test-Post</button>
+    <button id="test-put">Test-Put</button>
+    <button id="test-delete">Test-Delete</button>
+	
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript">
+    
+    var data = {"resume":{"name_first":"Bob"}};
+      
+    $(function() {
+      console.log("loaded");
+      $('#test-post').on('click', function() {
+		  $.ajax({
+		    method: 'POST',
+		    url: '/',
+		    data: JSON.stringify(data)
+		  });//end of ajax call
+      });//end of second unnamed function
+    });//end of first unnamed function
+
+    $(function() {
+      console.log("loaded");
+      $('#test-put').on('click', function() {
+      $.ajax({
+        method: 'PUT',
+        url: '/:id',
+        data: JSON.stringify(data)
+      });//end of ajax call
+      });//end of second unnamed function
+    });//end of first unnamed function
+
+    $(function() {
+      console.log("loaded");
+      $('#test-delete').on('click', function() {
+      $.ajax({
+        method: 'DELETE',
+        url: '/:id',
+        data: JSON.stringify(data)
+      });//end of ajax call
+      });//end of second unnamed function
+    });//end of first unnamed function
+    </script>
+  </body>
+</html>

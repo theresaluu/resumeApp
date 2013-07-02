@@ -2,19 +2,25 @@ body {
 	background-image:url('../images/stackedTile.jpg'); 
 }
 
-#more {
+/*#more {
 	padding-right: 550px;
-}
+}*/
 
 #name {
 	text-align: right;
-	margin-top: -98px;
-	margin-right: -19px;
 	font-size: 60px;
-	
+	padding-right: 125px;	
 }
 
-#basic {
+#buttonBay {
+	background-color: beige;
+	height: 150px;
+	width: 64px;
+	float: right;
+	position: fixed;
+}
+
+/*#basic {
 	margin-top: 44px;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -141,3 +147,4 @@ body {
 .responsibilities {
 	padding-left: 3px;
 }
+*/

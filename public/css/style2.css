@@ -1,0 +1,49 @@
+body {
+	background-image:url('../images/stackedTile.jpg'); 
+}
+
+#buttonBay {
+	height: 90px;
+	width: 50px;
+	float: right;
+	text-align: left;
+	position: fixed;
+}
+
+.btn {
+	width: 50px;
+}
+
+.xp_duration {
+	float:left;
+	
+}
+
+.xp_role {
+	font-style:italic;
+	text-transform: capitalize;
+	float:left;
+	
+}
+
+.xp_project {
+	text-transform: capitalize;
+	float:left;
+	
+}
+
+.xp_org {
+	font-weight:bold;
+	text-transform: capitalize;
+	float:left;
+}
+
+.xp_location {
+
+}
+
+.xp_responsibilities {
+	text-transform: capitalize;
+	float:left;
+	
+}

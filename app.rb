@@ -9,60 +9,55 @@ class Doc
 	include Mongoid::Document
 
 	field :name_first, type: String
-
-
-	embeds_one :street_address
+	field :name_last, type: String
+	#embeds_one :street_address
 end
 
-class StreetAddress
-  include Mongoid::Document
+# class StreetAddress
+#   include Mongoid::Document
   
-  field :street,   type: String
+#   field :street,   type: String
   
-  embedded_in :doc
-end
+#   embedded_in :doc
+# end
 
-get '/' do
-	content_type :json
-	docs = Doc.all
+# get '/' do
+# 	content_type :json
+# 	docs = Doc.all
 
-	docs.to_json
-end
+# 	docs.to_json
+# end
 
-get '/:id' do
-	content_type :json
-	doc = Doc.find params[:id] 
+# get '/:id' do
+# 	content_type :json
+# 	doc = Doc.find params[:id] 
 
-	doc.to_json
-end
+# 	doc.to_json
+# end
 
 #Post
-get '/' do
+post '/' do
 	content_type :json
-	data = JSON.parse(request.body.read)["resume"]
-	doc = Doc.create!(data)._id
-
-	Doc.to_json
-end
-
-#Put
-get '/:id' do
-	content_type :json
-	data = JSON.parse(request.body.read)["resume"]
-  doc = Doc.find params[:id]
-  doc.update_attributes!(data)
-
+	data = JSON.parse(request.body.read)["resume"]#requst.body.read gives the string your need to parse
+	doc = Doc.create!(data)#this creates this doc in the database
 	doc.to_json
 end
 
-#Delete
-get '/:id' do
+# Put
+put '/:' do
 	content_type :json
 	data = JSON.parse(request.body.read)["resume"]
-	doc.destroy
-
+	doc = Doc.find params[:id]
+	doc.update_attributes!(data)
 	doc.to_json
 end
+
+# #Delete
+# delete '/:id' do
+# 	data = JSON.parse(request.body.read)[:resume]
+# 	doc = Doc.find(params[:id])
+# 	doc.destroy
+# end
 
 
 #implement POST, PUT, and DELETE

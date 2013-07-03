@@ -21,19 +21,19 @@ end
 #   embedded_in :doc
 # end
 
-# get '/' do
-# 	content_type :json
-# 	docs = Doc.all
+get '/' do
+	content_type :json
+	docs = Doc.all
 
-# 	docs.to_json
-# end
+	docs.to_json
+end
 
-# get '/:id' do
-# 	content_type :json
-# 	doc = Doc.find params[:id] 
+get '/:id' do
+	content_type :json
+	doc = Doc.find params[:id] 
 
-# 	doc.to_json
-# end
+	doc.to_json
+end
 
 #Post
 post '/' do
@@ -44,20 +44,18 @@ post '/' do
 end
 
 # Put
-put '/:' do
-	content_type :json
+put '/:id' do
+	# content_type :json
 	data = JSON.parse(request.body.read)["resume"]
 	doc = Doc.find params[:id]
 	doc.update_attributes!(data)
-	doc.to_json
 end
 
 # #Delete
-# delete '/:id' do
-# 	data = JSON.parse(request.body.read)[:resume]
-# 	doc = Doc.find(params[:id])
-# 	doc.destroy
-# end
+delete '/:id' do
+	doc = Doc.find(params[:id])
+	doc.destroy
+end
 
 
 #implement POST, PUT, and DELETE

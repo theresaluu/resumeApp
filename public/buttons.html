@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>R&eacute;sum&eacute;</title>
+  </head>
+  <body>
+    <button id="test-post">Test-Post</button>
+    <button id="test-put">Test-Put</button>
+    <button id="test-delete">Test-Delete</button>
+	
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript">
+    
+    var obj  = {"name_first":"Bob", "name_last":"Ugly" };
+      var data = {"resume" : obj };
+      var to_ajax = JSON.stringify(data);
+    var update = {"name_first":"Betty", "name_last":"Pretty" };
+      var dataBack ={"resume" : update};
+      var bJax = JSON.stringify(dataBack);
+      
+    $(document).ready(function() {
+      console.log("loaded");
+      console.log(to_ajax);
+
+      $('#test-post').on('click', function() {
+  		  $.ajax({
+  		    method:       'POST',
+  		    url:          '/',
+          contentType:  'application/json',
+  		    data:         to_ajax,
+          success: function(data) {
+            console.log("Success", data);//to see what it returns to you
+          }
+  		  });//end of ajax call
+
+      });//end of second unnamed function
+
+      $('#test-put').on('click', function() {
+        $.ajax({
+          method:         'PUT',
+          url:            '/51d3822fa3672a4883000020',
+          contentType:    'application/json',
+          data:           bJax,
+          success: function(data) {
+               console.log('sending' + bJax);//to see what it returns to you
+            }
+        });//end of ajax call
+      });//end of second unnamed function
+
+      $('#test-delete').on('click', function() {
+        $.ajax({
+          method: 'DELETE',
+          url: '/51d380d8a3672a488300001f',
+          contentType: 'application/json',
+          data: to_ajax,
+          success: function(data){
+            console.log("Deleted");
+          }
+        });//end of ajax call
+      });//end of second unnamed function
+
+    });//end of first unnamed function
+
+    </script>
+  </body>
+</html>

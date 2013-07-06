@@ -1,8 +1,8 @@
 $(document).ready(function() {
-	$.ajax("/api/resumes", {
+	$.ajax("/", {
 		complete : function(response){
 
-			var resume=response.responseJSON[0];//gets the first resume
+			var resume = response.responseJSON[0];//gets the first resume
 			console.log(resume.id);
 			$('#name').attr('data-id', resume.id).html(resume.name_first + ' ' + resume.name_last);
 
@@ -85,15 +85,15 @@ $(document).ready(function() {
 				xp_location[i] = resume.experience[i].location;
 				xp_duration[i] = xp_start_month_year[i].slice(0,4) + '-' + xp_end_month_year[i].slice(0,4);
 				
-				$('.xp').append('<p class = xp_duration>' + xp_duration[i] + '</p>');
-				$('.xp').append('<p class = xp_role>' + xp_role[i] + '</p>');
-				$('.xp').append('<p class = xp_project>' + xp_project[i] + '</p>');
-				$('.xp').append('<p class = xp_org>' + xp_org[i] + '</p>');
-				$('.xp').append('<p class = xp_location>' + xp_location[i] + '</p>');
+				$('.xp').append('<li class = xp_duration>' + xp_duration[i] + '</li>');
+				$('.xp').append('<li class = xp_role>' + xp_role[i] + '</li>');
+				$('.xp').append('<li class = xp_project>' + xp_project[i] + '</li>');
+				$('.xp').append('<li class = xp_org>' + xp_org[i] + '</li>');
+				$('.xp').append('<li class = xp_location>' + xp_location[i] + '</li>');
 				
 				$.each(resume.experience[i].responsibilities, function(index, item) {
 					xp_responsibilities[i] = item;
-					$('.xp').append('<p class = span1>' + xp_responsibilities[i] + '</p>');
+					$('.xp').append('<li class = span1>' + xp_responsibilities[i] + '</li>');
 				});
 			}
 
